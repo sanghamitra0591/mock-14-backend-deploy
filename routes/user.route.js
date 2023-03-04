@@ -34,7 +34,7 @@ userRouter.post("/signup", async(req, res)=>{
     }
 })
 
-userRouter.post("/signin", async(req, res)=>{
+userRouter.post("/login", async(req, res)=>{
     const data= req.body;
     try {
         const user= await UserModel.find({"email":data.email});
