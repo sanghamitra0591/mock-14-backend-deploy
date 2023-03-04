@@ -5,6 +5,12 @@ const { userRouter } = require("./routes/user.route");
 
 const app= express();
 
+const cors= require("cors");
+
+app.use(cors({
+    origin : "*"
+}))
+
 app.use(express.json());
 
 require("dotenv").config();
